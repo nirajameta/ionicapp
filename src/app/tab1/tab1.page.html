@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-menu-button slot="start" contentId="main">
+        <img src="assets/icon/sidemenu1.png" class="imgScale" alt="logo">
+     </ion-menu-button>
+     <ion-title class="paddingtitle">Shopcart</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="no-padding">
+  <ion-grid>
+     <ion-row class="rowParent" >
+        <img src="assets/images/dashboardimg.png" class="imgScale" alt="logo">
+     </ion-row>
+     <ion-row  class="rowParent no-padding">
+        <ion-col size="6" no-padding style="position:relative" (click)="gotoProduct('Kids wear')">
+           <div class="textonImage">
+              <p>Kids wear</p>
+           </div>
+           <img src="assets/images/kids.jpg" class="imgScale" alt="logo" style="height:50vh">
+        </ion-col>
+        <ion-col size="6" no-padding>
+           <ion-row class="rowChild" (click)="gotoProduct('Women\'s wear')">
+              <div class="textonImage">
+                 <p>Women's wear</p>
+              </div>
+              <img src="assets/images/women.jpg" class="imgScale" alt="logo" style="height:25vh">
+           </ion-row>
+           <ion-row class="rowChild" (click)="gotoProduct('Men\'s wear')">
+              <div class="textonImage">
+                 <p>Men's wear</p>
+              </div>
+              <img src="assets/images/men.jpg" class="imgScale" alt="logo" style="height:25vh">
+           </ion-row>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+</ion-content>

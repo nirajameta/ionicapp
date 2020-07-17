@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start" (click)="goCatagory()">
+        <ion-back-button>
+        </ion-back-button>
+     </ion-buttons>
+     <ion-title class="paddingtitle">{{itemtitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div padding>
+     <ion-segment [(ngModel)]="category" (ionChange)="segmentChanged($event.detail.value)" scrollable>
+     <ion-segment-button *ngFor="let category of dataArray" value={{category.ItemType}} checked>
+        {{category.ItemType}}
+     </ion-segment-button>
+     </ion-segment>
+  </div>
+  <div [ngSwitch]="category">
+     <div *ngFor="let category of dataArray">
+        <div>
+           <div *ngSwitchCase=category.ItemType>
+              <ion-row>
+                 <ion-col size="6" class="no-padding" *ngFor="let category1 of category.itemCatagory" (click)="productView(category1)">
+                 <ion-card class="no-padding" >
+                    <img src="assets/images/{{category1.Itemimg}}" >
+                    <h5 class="alignname">{{category1.ItemName}}</h5>
+                    <div class="card-footer">
+                       <p class="itempara" style="float:left;padding-left: 10px;" >&#x20b9;{{category1.itemPrice}}</p>
+                       <p class="itempara" style="float:right;padding-right: 10px;" (click)="stopClick($event)">
+                          <ion-icon  (click)="category1.rowclicked = !category1.rowclicked" [name]= "category1.rowclicked ? 'heart' : 'heart-outline' " [color]="category1.rowclicked ? 'success': 'dark'"></ion-icon>
+                       </p>
+                    </div>
+                 </ion-card>
+                 </ion-col>
+              </ion-row>
+           </div>
+        </div>
+     </div>
+  </div>
+</ion-content>

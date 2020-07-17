@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <ion-slides pager loop="true"  [options]="slideOpt">
+     <ion-slide *ngFor="let item of pictureSlides">
+        <img src="assets/images/{{item.slideimg}}" alt="{{item.alt}}">
+     </ion-slide>
+  </ion-slides>
+  <div class="welcomeDiscribtion">
+     <h2>Welcome to <span>Shop cart</span> </h2>
+     <hr class="hrline">
+     <p>Each online store has its own store and bag, but if you want to go shopping 
+        in multiple places at once, so you only have one bag
+     </p>
   </div>
 </ion-content>
+<ion-footer class="ion-no-border" (click)="goSignUP()">
+  <ion-toolbar color="secondary" style="text-align: center;">
+     <ion-title>GET STARTED</ion-title>
+  </ion-toolbar>
+</ion-footer>

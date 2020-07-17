@@ -1,3 +1,33 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main">
+     <ion-menu contentId="main" slide="start" [swipeEnabled]="false">
+        <ion-content >
+           <ion-list lines="full" class="margin_t20">
+              <ion-item *ngFor="let p of menuSide; let i=index;" (click)="toggleLevel1('idx'+i,p.name)" [ngClass]="{active: isLevel1Shown('idx'+i)}">
+              <ion-label>
+                 <span>{{p.name}}</span> 
+                 <ion-icon [name]="isLevel1Shown('idx'+i) ? 'remove-circle-outline' : 'add-circle-outline'" slot="end" style="float:right"></ion-icon>
+                 <ul *ngIf="isLevel1Shown('idx'+i)" class="level1">
+                    <li *ngFor="let i1 of p.item; let j=index;" (click)="toggleLevel2('idx'+i+'idx'+j, p.name, i1.name )" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+j)}">
+                    <ion-icon [name]="isLevel2Shown('idx'+i+'idx'+j) ? 'arrow-dropdown-circle' : 'arrow-dropright-circle'" slot="end"></ion-icon>
+                    {{i1.name}}
+                    </li>
+                 </ul>
+              </ion-label>
+              </ion-item>
+              <ion-item>
+                 <ion-label>
+                    <span>Accessories</span> 
+                 </ion-label>
+              </ion-item>
+              <ion-item (click)="logout()">
+                 <ion-label>
+                    <span>Logout</span> 
+                 </ion-label>
+              </ion-item>
+           </ion-list>
+        </ion-content>
+     </ion-menu>
+     <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

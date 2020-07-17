@@ -1,0 +1,59 @@
+<ion-content>
+   <ion-row class="margin_20">
+      <ion-col size="2" (click)="goPreviousPage()">
+         <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-col>
+      <ion-col size="7" class="no-padding ion-align-self-center" style="padding:0">
+         <img src="assets/images/{{viewImage}}" style="height:300px;width:200px">
+      </ion-col>
+      <ion-col size="3">
+         <div style="display:inline">
+            <ion-icon name="cart-outline" class="iconAlign"></ion-icon>
+            <ion-icon [name]="iconHeart" class="iconAlign"  (click)="toggleLiked('heart-outline')"  [ngStyle]="{'color': buttonColor}"></ion-icon>
+         </div>
+      </ion-col>
+      <ion-col size="12" class="ion-align-self-center alignItemname">
+         <p>{{pageTitle}}</p>
+      </ion-col>
+      <ion-col size="12" class="ion-align-self-center alignItemname">
+         <span class="changeItemnameStyle">&#x20b9;{{itemPrice}}</span><span class="changeDeductPriceStyle">&#x20b9;{{diductprice}}</span>
+      </ion-col>
+   </ion-row>
+   <ion-row class="margin_t15">
+      <ion-col size="12">
+         <div style="text-align: center;">
+            <ion-radio-group allow-empty-selection="true" name="radio-group" (ionChange)="radioGroupChange($event)">
+               <ion-radio slot="start" name="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" *ngFor="let item of radio_list"
+                  color="{{item.color}}"  class="{{item.cssclass}}"></ion-radio>
+            </ion-radio-group>
+         </div>
+      </ion-col>
+   </ion-row>
+   <ion-row class="margin_t15" style="text-align: center;">
+      <ion-col size="12">
+         <div *ngFor="let act of sizeArr; let i = index" lines="none" style="display:inline;">
+            <button class="changebtn" large ion-button item-right (click)="SelectClicked(act.title, i)" [ngClass]="{'selected-color' : i==selectedIndex}">{{act.title}}</button>
+         </div>
+      </ion-col>
+   </ion-row>
+</ion-content>
+<ion-footer class="ion-no-border">
+   <ion-toolbar>
+      <ion-row class="bgcolor">
+         <ion-col size="3">
+            <span>QTY</span>
+         </ion-col>
+         <ion-col size="3">
+            <ion-select [(ngModel)]="selectQuality"  (ngModelChange)="companyFormSelected($event)">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            </ion-select>
+         </ion-col>
+         <ion-col size="6" style="background-color: #4c8dff;">
+            <ion-button expand="full" fill="clear" class="buttonsubmit">ADD TO CART</ion-button>
+         </ion-col>
+      </ion-row>
+   </ion-toolbar>
+</ion-footer>

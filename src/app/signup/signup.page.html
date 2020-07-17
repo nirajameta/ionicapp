@@ -1,0 +1,148 @@
+<ion-content>
+	<ion-row class="inoneline">
+	   <ion-col size="6">
+		  <img src="assets/icon/logo.png" alt="logo" style="width:150px">
+	   </ion-col>
+	   <ion-col size="3" offset="3">
+		  <p>Skip</p>
+	   </ion-col>
+	</ion-row>
+	<ion-slides  class="tochange" #slides (ionSlideDidChange)="slideChanged()" >
+	<ion-slide>
+	   <form [formGroup]="loginForm" class="loginformcss" (ngSubmit)="loginFormSubmit()" novalidate>
+	   <ion-grid>
+		  <ion-row justify-content-center>
+			 <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div text-center>
+				   <h4>Sign in</h4>
+				</div>
+				<div class="twogrid">
+				   <div class="rectangle"></div>
+				   <div class="rectangle1" (click)="nextSlide()"></div>
+				</div>
+				<ion-item>
+				   <ion-label position="floating" class="labelChange">Email</ion-label>
+				   <ion-input formControlName="email" type="email"></ion-input>
+				</ion-item>
+				<ion-item>
+				   <ion-label position="floating" class="labelChange">Password</ion-label>
+				   <ion-input formControlName="password" type="password"></ion-input>
+				</ion-item>
+				<p text-right>Forgot Password?</p>
+				<ion-button type="submit" color="secondary" expand="full" shape="round" [disabled]="!loginForm.valid" style="margin-top:50px">
+				   Login
+				</ion-button>
+			 </ion-col>
+		  </ion-row>
+	   </ion-grid>
+	   </form>
+	</ion-slide>
+	<ion-slide>
+	   <form [formGroup]="RegistrationForm" (ngSubmit)="submitForm()"  class="redisterformcss" novalidate>
+	   <div text-center>
+		  <h4>Sign up</h4>
+	   </div>
+	   <div class="twogrid">
+		  <div class="rectangle1" (click)="previousSlide()"></div>
+		  <div class="rectangle" style="margin-left:10px;"></div>
+	   </div>
+	   <ion-row>
+		  <ion-col size="1" class="iconDisplay">
+			 <div class="ion-text-start">
+				<ion-icon name="person-outline"></ion-icon>
+			 </div>
+		  </ion-col>
+		  <ion-col size="11">
+			 <ion-item lines="full" class="ion-no-padding">
+				<ion-label class="labelChange" position="floating">User name</ion-label>
+				<ion-input formControlName="name" type="text"></ion-input>
+			 </ion-item>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+			 Name is required.
+			 </span>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+			 Name should be min 2 chars long.
+			 </span>
+		  </ion-col>
+	   </ion-row>
+	   <ion-row class="ion-align-self-start">
+		  <ion-col size="1" class="iconDisplay">
+			 <div class="ion-text-start">
+				<ion-icon slot="start" name="mail-outline"></ion-icon>
+			 </div>
+		  </ion-col>
+		  <ion-col size="11">
+			 <ion-item lines="full" class="ion-no-padding">
+				<ion-label class="labelChange" position="floating">Email</ion-label>
+				<ion-input formControlName="email" type="email"></ion-input>
+			 </ion-item>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+			 Email is required.
+			 </span>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+			 Please provide valid email id.
+			 </span>
+		  </ion-col>
+	   </ion-row>
+	   <ion-row>
+		  <ion-col size="1" class="iconDisplay">
+			 <div class="ion-text-start">
+				<ion-icon name="phone-portrait"></ion-icon>
+			 </div>
+		  </ion-col>
+		  <ion-col size="11">
+			 <ion-item lines="full" class="ion-no-padding">
+				<ion-label class="labelChange" position="floating">Mobile</ion-label>
+				<ion-input maxlength="10" formControlName="mobile" type="number" required></ion-input>
+			 </ion-item>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.required">
+			 Mobile number is required.
+			 </span>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.pattern">
+			 Only numerical values allowed.
+			 </span>
+		  </ion-col>
+	   </ion-row>
+	   <ion-row>
+		  <ion-col size="1" class="iconDisplay">
+			 <div class="ion-text-start">
+				<ion-icon name="lock-closed-outline"></ion-icon>
+			 </div>
+		  </ion-col>
+		  <ion-col size="11">
+			 <ion-item lines="full" class="ion-no-padding">
+				<ion-label class="labelChange" position="floating">Password</ion-label>
+				<ion-input formControlName="password" type="{{password_type}}"></ion-input>
+				<ion-icon class="iconDisplay" slot="end" item-right (click)="togglePasswordMode()" [name]= "variableIcon ? 'eye-off' : 'eye' "></ion-icon>
+			 </ion-item>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+			 Password is required.
+			 </span>
+			 <span class="error ion-no-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+			 Password should be min 4 chars long.
+			 </span>
+		  </ion-col>
+	   </ion-row>
+	   <ion-row>
+		  <ion-col>
+			 <ion-button type="submit" color="secondary" expand="block" shape="round">Register</ion-button>
+		  </ion-col>
+	   </ion-row>
+	   <ion-row class="footericon">
+		  <ion-col size="6">
+			 Or sign up with
+		  </ion-col>
+		  <ion-col size="2">
+			 <ion-icon name="logo-facebook" class="iconmediacolors" color="primary" ></ion-icon>
+		  </ion-col>
+		  <ion-col size="2">
+			 <ion-icon name="logo-twitter" class="iconmediacolors" color="secondary"></ion-icon>
+		  </ion-col>
+		  <ion-col size="2">
+			 <ion-icon name="logo-google" class="iconmediacolors" color="danger"></ion-icon>
+		  </ion-col>
+	   </ion-row>
+	   </form>
+	</ion-slide>
+	</ion-slides>
+ </ion-content>

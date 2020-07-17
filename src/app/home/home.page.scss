@@ -1,27 +1,35 @@
-#container {
-  text-align: center;
+ion-content{
+    height:100%;
+    width:100%;
+    ion-slides{
+        height:60%;
+        --bullet-background: red;
+        --bullet-background-active: #0cd1e8;
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+    .welcomeDiscribtion{
+        height:30%;
+        margin-top:15%;
+        padding:0 15px;
+       
+        h2{
+            text-align: center;
+            display:block;
+            span{
+                font-weight:700;
+            }
+        }
+        .hrline{
+            width:50px;
+            border-top: 1px solid green;
+            margin:0 auto;
+        }
+        p{
+            text-align:center;
+        }
+    }
 }

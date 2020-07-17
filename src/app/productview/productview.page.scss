@@ -1,0 +1,97 @@
+ion-content{
+    height:100vh;
+}
+.margin_20{
+    margin-top:20px;
+   height:65vh;
+   align-content: center;
+   vertical-align: middle;
+}
+.margin_t15{
+    height:11vh;
+    align-content: center;
+    vertical-align: middle;
+}
+.iconAlign{
+    display:inline;
+    font-size:20px !important;
+    float: right;
+    padding-right:10px;
+}
+.alignItemname{
+    text-align: center;
+    p{
+        padding:0 !important;
+        margin:0 !important;
+    }
+    .changeItemnameStyle{
+        color:var(--ion-color-secondary);
+        font-size:16px;
+        padding-right:15px;
+    }
+    .changeDeductPriceStyle{
+        text-decoration: line-through;
+        color:rgb(105,105,105);
+        font-size:14px;
+    }
+}
+
+ion-radio{
+    height:30px;
+    width:30px;
+    margin-left:12px;
+    &.colorgreen{
+        --color : var(--ion-color-success) !important;
+        --color-checked:var(--ion-color-success);
+        --background: var(--ion-color-success);
+       
+    }
+    &.coloryellow{
+        --color : var(--ion-color-warning) !important;
+        --color-checked:var(--ion-color-warning);
+        --background: var(--ion-color-warning);
+    }
+    &.colorred{
+        --color: var(--ion-color-danger);
+        --color-checked :var(--ion-color-danger) !important;
+        --background: var(--ion-color-danger);
+    }
+    &.colorblue{
+        --color: var(--ion-color-primary);
+        --color-checked : var(--ion-color-primary) !important;
+        --background: var(--ion-color-primary);
+    }
+    &.colorprimary{
+        --color: var(--ion-color-secondary);
+        --color-checked : var(--ion-color-secondary) !important;
+        --background: var(--ion-color-secondary);
+    }
+    
+   }
+
+   .changebtn{
+       background-color: #f2f2f2;
+       padding:12px;
+       border-radius:12px;
+       margin-left:10px;
+       
+       &:focus{
+           outline: 0 !important;
+       }
+    }
+    .selected-color{
+        background-color: pink;
+        border-color:blue;
+        }
+    .bgcolor{
+        align-items: center; 
+        background-color: blue;
+        width: -webkit-fill-available;
+        color:#ffffff;
+    }
+    .buttonsubmit{
+    --color: #FFFFFF;
+    --border-width:0 !important;
+   
+}
+ 

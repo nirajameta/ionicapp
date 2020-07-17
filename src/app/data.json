@@ -1,0 +1,325 @@
+{
+    "employees":[
+      {
+        "ID": 1,
+        "slideimg": "img1.jpeg",
+        "alt":"pic1"
+      },
+      {
+        "ID": 2,
+        "slideimg": "2.jpg",
+        "alt":"pic2"
+      },
+      {
+        "ID": 3,
+        "slideimg": "3.jpg",
+        "alt":"pic3"
+       
+      }
+   
+    ],
+    "womendata": [
+      {
+        "ItemType": "Wallets & Purse",
+        "itemCatagory": [
+          {
+            "id": 1,
+            "Itemimg": "w1.jpg",
+            "ItemName": "Luspam Ispam",
+            "itemPrice":"500",
+            "diductprice":"550"
+          },
+          {
+            "id": 2,
+            "Itemimg": "w2.jpeg",
+            "ItemName": "Luspam Ispam1",
+            "itemPrice":"700",
+            "diductprice":"800"
+          },
+          {
+            "id": 3,
+            "Itemimg": "w3.jpeg",
+            "ItemName": "Luspam Ispam2",
+            "itemPrice":"1000",
+            "diductprice":"1200"
+          },
+          {
+            "id": 4,
+            "Itemimg": "w4.jpeg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"1200",
+            "diductprice":"1250"
+          }
+
+        ]
+
+      },
+
+      {
+        "ItemType": "Western Wear",
+        "itemCatagory": [
+          {
+            "id": 5,
+            "Itemimg": "w5.jpg",
+            "ItemName": "Luspam Ispam4",
+            "itemPrice":"1578",
+            "diductprice":"1678"
+          },
+          {
+            "id": 6,
+            "Itemimg": "w6.jpeg",
+            "ItemName": "Luspam Ispam5",
+            "itemPrice":"1111",
+            "diductprice":"1200"
+          },
+          {
+            "id": 7,
+            "Itemimg": "w7.jpeg",
+            "ItemName": "Luspam Ispam6",
+            "itemPrice":"1200",
+            "diductprice":"1400"
+          },
+          {
+            "id": 8,
+            "Itemimg": "w8.jpg",
+            "ItemName": "Luspam Ispam7",
+            "itemPrice":"1400",
+            "diductprice":"1500"
+          }
+        ]
+      },
+      {
+        "ItemType": "Jewellary",
+        "itemCatagory": [
+          {
+            "id": 5,
+            "Itemimg": "16.jpg",
+            "ItemName": "Luspam Ispam4",
+            "itemPrice":"9999"
+            
+          },
+          {
+            "id": 6,
+            "Itemimg": "17.jpeg",
+            "ItemName": "Luspam Ispam5",
+            "itemPrice":"7777"
+          },
+          {
+            "id": 7,
+            "Itemimg": "17.jpeg",
+            "ItemName": "Luspam Ispam6",
+            "itemPrice":"8888"
+          },
+          {
+            "id": 8,
+            "Itemimg": "16.jpg",
+            "ItemName": "Luspam Ispam7",
+            "itemPrice":"5555"
+          }
+        ]
+      }
+    ],
+
+    "mandata": [
+      {
+        "ItemType": "Wallet & Bags",
+        "itemCatagory": [
+          {
+            "id": 1,
+            "Itemimg": "m1.jpg",
+            "ItemName": "Luspam Ispam",
+            "itemPrice":"500",
+            "diductprice":"600"
+          },
+          {
+            "id": 2,
+            "Itemimg": "m2.jpeg",
+            "ItemName": "Luspam Ispam1",
+            "itemPrice":"700",
+            "diductprice":"800"
+          },
+          {
+            "id": 3,
+            "Itemimg": "m3.jpeg",
+            "ItemName": "Luspam Ispam2",
+            "itemPrice":"1000",
+            "diductprice":"1200"
+          },
+          {
+            "id": 4,
+            "Itemimg": "m4.jpeg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"1200",
+            "diductprice":"1500"
+          }
+        ]
+
+      },
+      {
+        "ItemType": "Western wear",
+        "itemCatagory": [
+          {
+            "id": 1,
+            "Itemimg": "9.jpg",
+            "ItemName": "Luspam Ispam",
+            "itemPrice":"500",
+            "diductprice":"700"
+          },
+          {
+            "id": 2,
+            "Itemimg": "10.jpeg",
+            "ItemName": "Luspam Ispam1",
+            "itemPrice":"700",
+            "diductprice":"800"
+          },
+          {
+            "id": 3,
+            "Itemimg": "11.jpg",
+            "ItemName": "Luspam Ispam2",
+            "itemPrice":"1000",
+            "diductprice":"1100"
+          },
+          {
+            "id": 4,
+            "Itemimg": "12.jpeg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"1200",
+            "diductprice":"1400"
+          }
+        ]
+
+      }
+    ],
+
+    "kidsdata": [
+      {
+        "ItemType": "Toys",
+        "itemCatagory": [
+          {
+            "id": 1,
+            "Itemimg": "k1.jpeg",
+            "ItemName": "Luspam Ispam",
+            "itemPrice":"400",
+            "diductprice":"500"
+          },
+          {
+            "id": 2,
+            "Itemimg": "k2.jpg",
+            "ItemName": "Luspam Ispam1",
+            "itemPrice":"500",
+            "diductprice":"600"
+          },
+          {
+            "id": 3,
+            "Itemimg": "slide1.jpg",
+            "ItemName": "Luspam Ispam2",
+            "itemPrice":"600",
+            "diductprice":"700"
+          },
+          {
+            "id": 4,
+            "Itemimg": "k4.jpg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"700",
+            "diductprice":"800"
+          },
+          {
+            "id": 4,
+            "Itemimg": "k5.jpg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"750",
+            "diductprice":"850"
+          }
+        ]
+
+      },
+      {
+        "ItemType": "wear boys & girls",
+        "itemCatagory": [
+          {
+            "id": 1,
+            "Itemimg": "k6.jpg",
+            "ItemName": "Luspam Ispam",
+            "itemPrice":"1500",
+            "diductprice":"1700"
+          },
+          {
+            "id": 2,
+            "Itemimg": "k7.jpg",
+            "ItemName": "Luspam Ispam1",
+            "itemPrice":"1600",
+            "diductprice":"1700"
+          },
+          {
+            "id": 3,
+            "Itemimg": "k8.jpg",
+            "ItemName": "Luspam Ispam2",
+            "itemPrice":"1700",
+            "diductprice":"1800"
+          },
+          {
+            "id": 4,
+            "Itemimg": "k9.jpg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"1800",
+            "diductprice":"2000"
+          },
+          {
+            "id": 5,
+            "Itemimg": "k10.jpeg",
+            "ItemName": "Luspam Ispam3",
+            "itemPrice":"2000",
+            "diductprice":"2200"
+          }
+        ]
+
+      }
+    ],
+
+    "sideMenu": [
+      {
+        "name": "Men's wear",
+        "item": [
+          {
+            "name": "Wallet & Bags"
+           
+          },
+          {
+            "name": "Western wear"
+          }
+         
+        ]
+      },
+      {
+        "name": "Women's wear",
+        "item": [
+          {
+            "name": "Wallets & Purse"
+          },
+          {
+            "name": "Western Wear"
+          },
+          {
+            "name": "Jewellary"
+          }
+        ]
+      },
+      {
+        "name": "Kids wear",
+        "item": [
+          {
+            "name": "Toys"
+          },
+          {
+            "name": "wear boys & girls"
+          }
+        
+        ]
+      }
+     
+     
+    ]
+  
+}
+  
+   
